@@ -63,9 +63,9 @@
 
         <!-- Phone Number -->
         <div class="mt-4">
-            <x-input-label for="phonenumber" :value="__('Phone Number')" />
-            <x-text-input id="phonenumber" class="block mt-1 w-full" type="number" name="phonenumber" :value="old('phonenumber')" required autofocus autocomplete="phonenumber" />
-            <x-input-error :messages="$errors->get('phonenumber')" class="mt-2" />
+            <x-input-label for="phoneNumber" :value="__('Phone Number')" />
+            <x-text-input id="phoneNumber" class="block mt-1 w-full" type="number" name="phoneNumber" :value="old('phoneNumber')" required autofocus autocomplete="phoneNumber" />
+            <x-input-error :messages="$errors->get('phoneNumber')" class="mt-2" />
         </div>
 
         <!-- Religion -->
