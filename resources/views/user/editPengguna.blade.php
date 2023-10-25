@@ -1,6 +1,7 @@
-<!-- Divee Ananda Damarjati -->
-<!-- 4601 -->
-<!-- 6706220106 -->
+<!-- Ghania Raushan Fayyaza
+6706223034
+D3IF - 46 - 03 -->
+
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
