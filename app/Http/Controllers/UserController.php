@@ -4,12 +4,21 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\DataTables\UserDataTable;
 
 class UserController extends Controller
 {
-    public function index() {
-        $users = User::all();
-        return view('user.daftarPengguna', compact('users'));
+    // Ghania Raushan Fayyaza
+    // 6706223034
+    // D3IF-46-03
+    
+    // public function index() {
+    //     $users = User::all();
+    //     return view('user.daftarPengguna', compact('users'));
+    // }
+    public function index(UserDataTable $dataTable)
+    {
+        return $dataTable->render('user.daftarPengguna');
     }
 
     public function showUser($username) {

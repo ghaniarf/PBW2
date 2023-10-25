@@ -3,14 +3,22 @@
 namespace App\Http\Controllers;
 
 use App\Models\Collection;
-use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
+use App\DataTables\KoleksiDataTable;
 
 class CollectionController extends Controller
 {
-    public function index() {
-        $koleksi = Collection::all();
-        return view('koleksi.daftarKoleksi', compact('koleksi'));
+
+
+    // public function index() {
+    //     $koleksi = Koleksi::all();
+    //     return view('koleksi.daftarKoleksi', compact('koleksi'));
+    // }
+
+    public function index(KoleksiDataTable $dataTable)
+    {
+        return $dataTable->render('koleksi.daftarKoleksi');
     }
 
     public function show($id)
@@ -36,8 +44,9 @@ class CollectionController extends Controller
         'jenisKoleksi' => $request->jenisKoleksi,
         'jumlahKoleksi' => $request->jumlahKoleksi,
     ]);
-    
+    // return redirect()->route('koleksi.store')->with('success', 'Koleksi berhasil ditambahkan!');
     Session::flash('success', 'Koleksi berhasil ditambahkan!');
     return redirect()->route('koleksi.registrasi');
 }
+
 }

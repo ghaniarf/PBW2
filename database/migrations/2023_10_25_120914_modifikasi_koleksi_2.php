@@ -11,12 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('koleksi', function (Blueprint $table) {
-            $table->id();
-            $table->string('namaKoleksi',100);
-            $table->tinyInteger('jenisKoleksi');
-            $table->timestamp('created_at')->nullable();
-            $table->integer('jumlahKoleksi');
+        Schema::table('koleksi', function (Blueprint $table) {
+            $table->timestamps();
         });
     }
 
